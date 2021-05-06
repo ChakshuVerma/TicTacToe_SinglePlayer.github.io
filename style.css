@@ -78,7 +78,6 @@ td:last-child {
 }
 
 .Pre-Info {
-    border: 2px solid red;
     display: flex;
     flex-direction: column;
     flex-wrap: nowrap;
@@ -109,7 +108,6 @@ button {
     font-size: 30px;
     background-color: white;
     border-radius: 20%;
-    border: red solid 2px;
 }
 
 #DoneBtn:active {
@@ -155,6 +153,7 @@ button {
     border-radius: 5px;
     color: white;
     font-size: 2em;
+    display: none;
 }
 
 @media all and (max-height: 600px){
@@ -162,21 +161,18 @@ button {
         margin-bottom: 20px;
     }
 
-    td {
-        height: 70px;
-        width: 70px;
-        font-size: 30px;
+    .Pre-Info {
+        width: 80%;
     }
-}
+} 
 
 @media all and (max-width: 550px){
     .GameName{
-        font-size: 50px;
+        font-size: 55px;
+        font-weight: 700;
     }
 
-    td {
-        height: 70px;
-        width: 70px;
-        font-size: 30px;
+    .Pre-Info {
+        width: 80%;
     }
 }
