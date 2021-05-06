@@ -4,12 +4,17 @@ function preInfoComplete() {
 	AIName = AIName.trim();
 	PlayerName = PlayerName.trim();
 	if(AIName !== '' && PlayerName !== '' && SymbolChosen === true){
+		if (!/^[a-zA-Z]+$/.test(PlayerName)){
+			alert("Player Name allows only letters")
+		}
+		else {
 		document.getElementById('PlayerNameInput').disabled = true;
 		document.getElementById('AINameInput').disabled = true;
 		document.getElementById('DoneBtn').disabled = true;
 		document.getElementsByClassName('Pre-Info-Container')[0].style.zIndex = '-2';
 		document.querySelector('table').style.display = 'block';
 		document.getElementsByClassName('GameName')[0].style.display = 'block';
+		}
 	}
 	else{
 		alert("Please Provide The Required Information")
